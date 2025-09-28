@@ -1,8 +1,8 @@
 ## Two Sum
 <details>
 <summary>Brute Force Solution</summary>
-```python
     
+```python
     class Solution:
         def twoSum(self, nums: list[int], target: int) -> list[int]:
             for i in range(len(nums)):
@@ -21,8 +21,8 @@
 </details>
 ```
 ## ⚡ Efficent Solution
-```python
 
+```python
     class Solution:
         def twoSum(self, nums: list[int], target: int) -> list[int]:
             seen = {}
@@ -38,5 +38,9 @@
 
 ## Time Complexity: O(n)
 ## Space Complexity: O(n)
-### Hashmaps
 ```
+| Approach       | Time Complexity | Space Complexity |
+|----------------|-----------------|------------------|
+| Brute Force    | O(n²)           | O(1)             |
+| Hashmap        | O(n)            | O(n)             |
+
