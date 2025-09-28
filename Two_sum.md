@@ -1,8 +1,7 @@
 ## Two Sum
 <details>
 <summary>Brute Force Solution</summary>
-```
-python
+```python
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
         for i in range(len(nums)):
@@ -24,7 +23,6 @@ print(sol.twoSum(nums,target))
 ```python
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
-        
         seen = {}
         for i,num in enumerate(nums):
             if target - num in seen:
