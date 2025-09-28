@@ -1,4 +1,5 @@
 ## Two Sum
+```
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
         
@@ -14,9 +15,9 @@ print(sol.twoSum(nums,target))
 
 ## Time Complexity: O(n**2)
 ## Space Complexity: O(n)
-
+```
 ############################################## Efficent Solution ####################################
-
+```
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
         
@@ -34,3 +35,4 @@ print(sol.twoSum(nums,target))
 ## Time Complexity: O(n)
 ## Space Complexity: O(n)
 ### Hashmaps
+```
