@@ -1,4 +1,6 @@
 ## Two Sum
+<details>
+<summary>Brute Force Solution</summary>
 ```python
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
@@ -15,9 +17,11 @@ print(sol.twoSum(nums,target))
 
 ## Time Complexity: O(n**2)
 ## Space Complexity: O(n)
+
+</details>
 ```
-############################################## Efficent Solution ####################################
-```
+## ⚡ Efficent Solution
+```python
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
         
