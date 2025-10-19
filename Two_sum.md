@@ -44,12 +44,13 @@
 | Brute Force    | O(n²)           | O(n)             |
 | Hashmap        | O(n)            | O(n)             |
 
-### Approach
-<approach>
+
+<summary>Approach</summary>
+<details>
     
     1) while iterating through for-loop always index will be first
     2) we then check if 'target-num' is in seen(initialize seen at the start)
     3) if it is then we return index of this one by 'idx' & that one by 'seen[target-num]' --> gives another index
     4) else we tell seen[num] = idx(here we assign 'idx' & 'num' to seen)[So, that 'idx' of seen && 'idx' of nums is always same]
     
-</approach>
+</details>
