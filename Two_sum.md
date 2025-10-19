@@ -45,8 +45,9 @@
 | Hashmap        | O(n)            | O(n)             |
 
 
-<summary>Approach</summary>
+
 <details>
+<summary>Approach</summary>
     
     1) while iterating through for-loop always index will be first
     2) we then check if 'target-num' is in seen(initialize seen at the start)
