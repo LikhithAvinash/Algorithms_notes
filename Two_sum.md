@@ -41,6 +41,6 @@
 ```
 | Approach       | Time Complexity | Space Complexity |
 |----------------|-----------------|------------------|
-| Brute Force    | O(n²)           | O(1)             |
+| Brute Force    | O(n²)           | O(n)             |
 | Hashmap        | O(n)            | O(n)             |
 
