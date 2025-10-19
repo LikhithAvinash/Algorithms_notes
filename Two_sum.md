@@ -26,10 +26,10 @@
     class Solution:
         def twoSum(self, nums: list[int], target: int) -> list[int]:
             seen = {}
-            for i,num in enumerate(nums):
+            for idx,num in enumerate(nums):
                 if target - num in seen:
-                    return [seen[target-num],i]
-                seen[num] = i
+                    return [seen[target-num],idx]
+                seen[num] = idx
     sol = Solution()
     
     nums = [2,7,11,15]
