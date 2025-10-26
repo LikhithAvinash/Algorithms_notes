@@ -49,11 +49,6 @@
             if carry > 0:
                 new.append(carry)
     
-            # New = new[::-1]
-    
-            # if not new:
-            #     return [0]
-            
             head = ListNode(new[0])
             curr = head
             for value in new[1:]:
