@@ -105,10 +105,15 @@
   ```
 | Approach       | Time Complexity | Space Complexity |
 |----------------|-----------------|------------------|
-| Brute Force    | O(n²)           | O(n)             |
+| Brute Force    | O(n)            | O(n)             |
 | Hashmap        | O(n)            | O(n)             |
 
 <details>
 <summary>Approach</summary>
 
     1) First assign dummy_head(which will be none)
+    2) Assign a pointer to this one
+    3) check if the value exit in that particular linked list for each one
+    4) Find the carry(//) and the new_digit(%)
+    5) for this new LL add this node and iterate through it
+
