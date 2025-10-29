@@ -2,6 +2,7 @@
 **Understanding** 
 
 ❌- find the median of 2 arrays and then add it and find median again
+
 ✅- find the median of 2 combined array and then find median
     * if odd then the **middle elemnent** is median
     * if even then **mean of all elements** is mean
