@@ -73,6 +73,6 @@ print(sol.lengthOfLongestSubstring(s))
 
 <details>
 <summary>Approach</summary>
-    1) *Understanding*
+    1) **Understanding**
     
 </details>
