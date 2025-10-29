@@ -5,8 +5,8 @@
 
 ✅- find the median of 2 combined array and then find median
 
-    * if odd then the **middle elemnent** is median
-    * if even then **mean of all elements** is mean
+   * if odd then the **middle elemnent** is median
+   * if even then **mean of all elements** is mean
     
   ```python
 class Solution:
