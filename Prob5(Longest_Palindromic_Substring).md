@@ -24,3 +24,53 @@
 ## Space Complexity: O(n)
 ```
 </details>
+
+## ⚡ Efficent Solution
+
+```python
+    class Solution:
+   def longestPalindrome(self, s: str) -> str:
+        res = ""
+        max_len = 0
+
+        ## odd length
+        for i in range(len(s)):
+            r,l = i,i
+            while l >= 0 and r < len(s) and s[l] == s[r]:
+                if max_len < (r - l + 1):
+                    res = s[l:r+1]
+                    max_len = r - l + 1
+            
+                l -= 1
+                r += 1
+        
+        ## even length 
+        
+            r,l = i+1,i
+            while l >= 0 and r < len(s) and s[l] == s[r]:
+                if max_len < (r - l + 1):
+                    res = s[l:r+1]
+                    max_len = r - l + 1
+                
+                l -= 1
+                r += 1
+        
+        return res
+
+## Time Complexity: O(n*2)
+## Space Complexity: O(n)
+```
+| Approach       | Time Complexity | Space Complexity |
+|----------------|-----------------|------------------|
+| Brute Force    | O(n**3)         | O(n)             |
+| Hashmap        | O(n*2)          | O(n)             |
+
+<details>
+  <summary>📊 Traditional Models Example</summary>
+  <img 
+    src="https://github.com/LikhithAvinash/Algorithms_notes/blob/master/assets/prob5.png" 
+    alt="Traditional vs Evolutionary Models" 
+    width="675" 
+    height="899" 
+  />
+</details>
