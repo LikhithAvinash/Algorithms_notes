@@ -66,7 +66,7 @@
 | Hashmap        | O(n*2)          | O(n)             |
 
 <details>
-  <summary>📊 Traditional Models Example</summary>
+  <summary>📊 Approach</summary>
   <img 
     src="https://github.com/LikhithAvinash/Algorithms_notes/blob/master/assets/prob5.png" 
     alt="Traditional vs Evolutionary Models" 
