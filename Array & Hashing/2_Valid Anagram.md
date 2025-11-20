@@ -57,7 +57,7 @@
 <details>
 <summary>Approach</summary>
 
-    1) Hash approach - Here I found no. of letters for string1 irrespective of string2 and also I calculated no. of letters for string2 irrespective of string1
+    1) Hash approach - Here I found no. of letters for string1 & string2 seperately and then if they were equall or not
     2) Library approach - Here I just Imported Library and checked it(this library contiains the above approach code in it)
     
 </details>
