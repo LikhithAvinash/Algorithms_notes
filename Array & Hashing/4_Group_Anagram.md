@@ -1,50 +1,94 @@
-## Two Sum
+## Group Anagram
 <details>
 <summary>Brute Force Solution</summary>
     
 ```python
     class Solution:
-        def twoSum(self, nums: list[int], target: int) -> list[int]:
-            for i in range(len(nums)):
-                for j in range(i+1,len(nums)):
-                    if nums[i] + nums[j] == target:
-                        return [i,j]
-    sol = Solution()
-    
-    nums = [2,7,11,15]
-    target = 9
-    print(sol.twoSum(nums,target))
+        def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+            
+            all = []
+            for j in strs:
+                freq = {}
+                for i in j:
+                    if i not in freq:
+                        freq[i] = 1
+                    else:
+                        freq[i] += 1
+                
+                all.append(freq)
 
-## Time Complexity: O(n**2)
-## Space Complexity: O(n)
+            new = []
+
+            for m in range(len(all)):
+                sub = []
+                for n in range(m,len(all)-1):
+
+                    if all[n] == all[n+1] and len(sub) == 0:
+                        sub.append(all[n])
+                        sub.append(all[n+1])
+
+                    elif all[n] == all[n+1] and len(sub) != 0:
+                        sub.append(all[n+1])
+                    
+                
+                new.append(sub)
+
+            return new
 ```
 </details>
 
+<details>
+<summary>Reason for the Above Failed Approach</summary>
+    1) Here in the 2nd nested loop I am checking the adjacent element but not the complete list So, it gives me wrong answer
+    2) In the 2nd for loop last element is not checked ~ Leads to inaccurate answer
+    3) I am appending freq dicts into it ~Leetcode don't get the expected and gives Error.
+    4) <img alt="Returns Empty List" src="./assets/Mistake_group_anagram.png" />
+</details>
+
+## Normal Solution
+```python
+        class Solution:
+            def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+                
+                all = []
+                for j in strs:
+                    freq = {}
+                    for i in j:
+                        if i not in freq:
+                            freq[i] = 1
+                        else:
+                            freq[i] += 1
+                    all.append(freq)
+
+                new = []
+
+                for m in range(len(all)):
+                    sub = []
+                    for n in range(len(all)):
+
+                        if all[m] == all[n]:
+                            sub.append(strs[n])
+                        
+                    new.append(sub)
+                
+                a = []
+                for l in new:
+                    if l not in a:
+                        a.append(l)
+
+                return a
+Time Complexity: O(n**2 * k)
+Space Complexity: O(n**2)
+```
 ## ⚡ Efficent Solution
 
 ```python
-    class Solution:
-        def twoSum(self, nums: list[int], target: int) -> list[int]:
-            seen = {}
-            for idx,num in enumerate(nums):
-                if target - num in seen:
-                    return [seen[target-num],idx]
-                seen[num] = idx
-    sol = Solution()
     
-    nums = [2,7,11,15]
-    target = 9
-    print(sol.twoSum(nums,target))
-
-## Time Complexity: O(n)
-## Space Complexity: O(n)
 ```
 | Approach       | Time Complexity | Space Complexity |
 |----------------|-----------------|------------------|
-| Brute Force    | O(n²)           | O(n)             |
+| Brute Force    | O(n² * k)       | O(n²)            |
 | Hashmap        | O(n)            | O(n)             |
-
-
 
 <details>
 <summary>Approach</summary>
