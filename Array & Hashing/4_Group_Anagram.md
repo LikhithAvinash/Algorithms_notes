@@ -123,8 +123,7 @@ class Solution:
 
 
 Time Complexity: O(n*k)
-Space Complexity: O(n*k)
-    
+Space Complexity: O(n*k)  
 ```
 | Approach       | Time Complexity | Space Complexity |
 |----------------|-----------------|------------------|
