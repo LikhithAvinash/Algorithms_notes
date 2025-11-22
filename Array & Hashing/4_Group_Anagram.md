@@ -51,36 +51,36 @@
 
 ## Normal Solution
 ```python
-        class Solution:
-            def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        
+        all = []
+        for j in strs:
+            freq = {}
+            for i in j:
+                if i not in freq:
+                    freq[i] = 1
+                else:
+                    freq[i] += 1
+            all.append(freq)
+
+        new = []
+
+        for m in range(len(all)):
+            sub = []
+            for n in range(len(all)):
+
+                if all[m] == all[n]:
+                    sub.append(strs[n])
                 
-                all = []
-                for j in strs:
-                    freq = {}
-                    for i in j:
-                        if i not in freq:
-                            freq[i] = 1
-                        else:
-                            freq[i] += 1
-                    all.append(freq)
+            new.append(sub)
+        
+        a = []
+        for l in new:
+            if l not in a:
+                a.append(l)
 
-                new = []
-
-                for m in range(len(all)):
-                    sub = []
-                    for n in range(len(all)):
-
-                        if all[m] == all[n]:
-                            sub.append(strs[n])
-                        
-                    new.append(sub)
-                
-                a = []
-                for l in new:
-                    if l not in a:
-                        a.append(l)
-
-                return a
+        return a
 Time Complexity: O(n**2 * k)
 Space Complexity: O(n**2)
 ```
