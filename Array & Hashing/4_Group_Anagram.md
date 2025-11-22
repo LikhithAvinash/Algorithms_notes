@@ -39,9 +39,9 @@
 
 <details>
 <summary>Reason for the Above Failed Approach</summary>
-    1) Here in the 2nd nested loop I am checking the adjacent element but not the complete list So, it gives me wrong answer
-    2) In the 2nd for loop last element is not checked ~ Leads to inaccurate answer
-    3) I am appending freq dicts into it ~Leetcode don't get the expected and gives Error.
+    1) Here in the 2nd nested loop I am checking the adjacent element but not the complete list So, it gives me wrong answer  
+    2) In the 2nd for loop last element is not checked ~ Leads to inaccurate answer  
+    3) I am appending freq dicts into it ~Leetcode don't get the expected and gives Error.  
     4) <img alt="Returns Empty List" src="../assets/Mistake_group_anagram.png" />
 
 </details>
