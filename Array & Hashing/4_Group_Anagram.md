@@ -87,12 +87,45 @@ Space Complexity: O(n**2)
 ## ⚡ Efficent Solution
 
 ```python
+        from collections import defaultdict
+        from typing import List
+        
+        class Solution:
+            """
+            Groups a list of strings into groups of anagrams.
+            """
+            def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+                
+                # 1. Initialize defaultdict:
+                # The key will be the character count tuple (immutable).
+                # The value will be a list to store all anagrams that share that count.
+                res = defaultdict(list)
+        
+                # 2. Iterate through every word in the input list
+                for s in strs:
+                    # Initialize a count array of size 26 for 'a' through 'z'
+                    count = [0] * 26
+        
+                    # 3. Calculate the character count for the current word (s)
+                    for char in s:
+                        # Use ord(char) - ord('a') to map 'a' to index 0, 'b' to 1, ..., 'z' to 25
+                        index = ord(char) - ord('a')
+                        count[index] += 1
+                    
+                    # 4. Use the immutable tuple of counts as the key
+                    # Append the current word (s) to the list associated with that unique key
+                    res[tuple(count)].append(s)
+        
+                # 5. Return only the values of the dictionary, which are the lists of anagram groups
+                return list(res.values())
+Time Complexity: O(n*k)
+Space Complexity: O(n*k)
     
 ```
 | Approach       | Time Complexity | Space Complexity |
 |----------------|-----------------|------------------|
-| Brute Force    | O(n² * k)       | O(n²)            |
-| Hashmap        | O(n)            | O(n)             |
+| Normal Solution| O(n² * k)       | O(n²)            |
+| Efficent "     | O(n*k)          | O(n*k)             |
 
 <details>
 <summary>Approach</summary>
