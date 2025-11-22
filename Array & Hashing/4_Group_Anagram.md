@@ -1,6 +1,6 @@
 ## Group Anagram
 <details>
-<summary>Brute Force Solution</summary>
+<summary>Failed Approach</summary>
     
 ```python
     class Solution:
