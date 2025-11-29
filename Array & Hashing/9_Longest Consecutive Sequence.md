@@ -61,7 +61,6 @@
 <details>
 <summary>Approach</summary>
 
-    1) Hash approach - Here I found no. of letters for string1 irrespective of string2 and also I calculated no. of letters for string2 irrespective of string1
-    2) Library approach - Here I just Imported Library and checked it(this library contiains the above approach code in it)
+    1) First remove duplicate elements by using `set` keyword...then sort them[if we do it in reverse way then it won't be sorted --> sort and then set]
     
 </details>
