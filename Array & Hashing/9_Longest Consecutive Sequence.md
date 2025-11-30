@@ -20,7 +20,6 @@
             while i < n - 1:   
                 if o[i+1] - o[i] == 1:
                     count += 1
-                    val = True
                         
                 else:
                     new.append(count)
