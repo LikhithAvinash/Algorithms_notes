@@ -1,7 +1,7 @@
 ## Top K Frequent Elements
-<details>
-<summary>Brute Force Solution</summary>
-    
+
+## ⚡ Efficent Solution
+
 ```python
     class Solution:
         def topKFrequent(self, nums: List[int], k: int) -> List[int]:
@@ -24,13 +24,6 @@
             
 ## Time Complexity: O(nlogn)
 ## Space Complexity: O(n)
-```
-</details>
-
-## ⚡ Efficent Solution
-
-```python
-    
 
 ## Time Complexity: O(n)
 ## Space Complexity: O(n)
@@ -46,7 +39,6 @@
 <summary>Approach</summary>
 
     1) Approach_1 = i) freq of each characther in a word ii) sort it based on the value in descending order iii) append elements to the list for the range in k
-    2) 
     
 </details>
 
