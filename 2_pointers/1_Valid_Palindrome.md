@@ -69,5 +69,7 @@ Space Complexity: O(1)
     1) Here in this I am directly checking whether the front & back side of the characters are not alpha numeric or not
     2) if they are then...I return False
     3) else they are been moved to next characther(for example i = 0 to i = 1 &&&& j = len(s) -1 to len(s) -2
+    4) NOTE: I also made sure that the while loop --> i < j bcz in that particular loop when i or j incremented it go out of index
+    5) Example: '.,' here i = 0 and j = 1 so in this case it could go i = 1 and j =  0...so on which is not valid it should always be i < j while comparing
     
 </details>
