@@ -26,52 +26,36 @@ Space Complexity: O(n)
 </details>
 
 <details>
-<summary>Reason for the Above Failed Approach</summary>
-    1) Here in the 2nd nested loop I am checking the adjacent element but not the complete list So, it gives me wrong answer
-    2) In the 2nd for loop last element is not checked ~ Leads to inaccurate answer
-    3) I am appending freq dicts into it ~Leetcode don't get the expected and gives Error.
-    4) <img alt="Returns Empty List" src="./assets/Mistake_group_anagram.png" />
+<summary>Brute Force Idea</summary>
+    1) Here in this I created 'l' where this variable stores all the elements that aren't alpha numeric and also stores them as lowercase
+    2) In the 2nd for loop I compare & decide
 </details>
 
-## Normal Solution
-```python
-        class Solution:
-            def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-                
-                all = []
-                for j in strs:
-                    freq = {}
-                    for i in j:
-                        if i not in freq:
-                            freq[i] = 1
-                        else:
-                            freq[i] += 1
-                    all.append(freq)
-
-                new = []
-
-                for m in range(len(all)):
-                    sub = []
-                    for n in range(len(all)):
-
-                        if all[m] == all[n]:
-                            sub.append(strs[n])
-                        
-                    new.append(sub)
-                
-                a = []
-                for l in new:
-                    if l not in a:
-                        a.append(l)
-
-                return a
-Time Complexity: O(n**2 * k)
-Space Complexity: O(n**2)
-```
 ## ⚡ Efficent Solution
-
+        
 ```python
+    class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        
+        i, j = 0,len(s) -1
     
+        while i < j:
+
+            while i < j and not s[i].isalnum():
+                i += 1
+            while i < j and not s[j].isalnum():
+                j -= 1
+            
+            if s[i].lower() != s[j].lower():
+                return False
+            
+            i += 1
+            j -= 1
+            
+        return True
+
+Time Complexity: O(n)
+Space Complexity: O(1)
 ```
 | Approach       | Time Complexity | Space Complexity |
 |----------------|-----------------|------------------|
@@ -80,10 +64,8 @@ Space Complexity: O(n**2)
 
 <details>
 <summary>Approach</summary>
-    
-    1) while iterating through for-loop always index will be first
-    2) we then check if 'target-num' is in seen(initialize seen at the start)
-    3) if it is then we return index of this one by 'idx' & that one by 'seen[target-num]' --> gives another index
-    4) else we tell seen[num] = idx(here we assign 'idx' & 'num' to seen)[So, that 'idx' of seen && 'idx' of nums is always same]
+    1) Here in this I am directly checking whether the front & back side of the characters are not alpha numeric or not
+    2) if they are then...I return False
+    3) else they are been moved to next characther(for example i = 0 to i = 1 &&&& j = len(s) -1 to len(s) -2
     
 </details>
