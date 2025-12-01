@@ -27,6 +27,7 @@ Space Complexity: O(n)
 
 <details>
 <summary>Brute Force Idea</summary>
+    
     1) Here in this I created 'l' where this variable stores all the elements that aren't alpha numeric and also stores them as lowercase
     2) In the 2nd for loop I compare & decide
 </details>
@@ -64,6 +65,7 @@ Space Complexity: O(1)
 
 <details>
 <summary>Approach</summary>
+    
     1) Here in this I am directly checking whether the front & back side of the characters are not alpha numeric or not
     2) if they are then...I return False
     3) else they are been moved to next characther(for example i = 0 to i = 1 &&&& j = len(s) -1 to len(s) -2
