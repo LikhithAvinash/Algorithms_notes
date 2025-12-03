@@ -88,7 +88,7 @@ Space Complexity: O(1)
 <details>
 <summary>Approach</summary>
     
-    1) 
+    1) First sort the nums....So now I willl have all small elements on the left side and larger elements on the right side...To avoid nultiple list of duplicates(change in the order) we write if nums[i] == nums[i-1] only when greater than 0 because..first time when we add i = 0 there won't be duplicate but from i = 1 to n -1 we see a log of duplicate elements.. to avoid it I wrote the continue(if the condition satisfies `nums[i] == nums[i-1]`it moves i to the next value)
     2) Here I am checking if `result` is actually less than `0` then I need to make sure my I need to increment the nums(as it sorted incrementing it to the right side make sure the next element I get is bigger than the current element)
     3) Similarly for `result` greater than 0 I need to decrement my right index as decrement would give small number(In the sorted list)
     4) if this 2 weren't then it means that the result is correct. SO we append it to our main list
