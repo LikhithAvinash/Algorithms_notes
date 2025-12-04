@@ -19,18 +19,20 @@
                 
             return val
                          
-Time Complexity: O(n)
-Space Complexity: O(n)
+Time Complexity: O(n**2)
+Space Complexity: O(1)
 
 ```
 </details>
 
 <details>
-<summary>Reason for the Above Failed Approach</summary>
-    1) Here in the 2nd nested loop I am checking the adjacent element but not the complete list So, it gives me wrong answer
-    2) In the 2nd for loop last element is not checked ~ Leads to inaccurate answer
-    3) I am appending freq dicts into it ~Leetcode don't get the expected and gives Error.
-    4) <img alt="Returns Empty List" src="./assets/Mistake_group_anagram.png" />
+<summary>Method for Brute Force Approach</summary>
+    
+    1) Initiate val and count then write 2 for loops
+    2) Here 1st get the minimum height of 2 heights one in 1st for loop(i) and the other one in 2nd for loop(j) --> m =  min(heights[i],heights[j])  
+    3) Then put breadth which is b = i -j 
+    4) so the val will be b * m -----> which gives the maximum area in a given array
+    5) simply store the maximum value in a variable & return it
 </details>
 
 ## Normal Solution
@@ -65,8 +67,8 @@ Space Complexity: O(n)
                         a.append(l)
 
                 return a
-Time Complexity: O(n**2 * k)
-Space Complexity: O(n**2)
+Time Complexity: O(n)
+Space Complexity: O(1)
 ```
 ## ⚡ Efficent Solution
 
