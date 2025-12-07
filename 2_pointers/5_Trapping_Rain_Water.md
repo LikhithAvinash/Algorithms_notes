@@ -53,16 +53,47 @@ Space Complexity: O(n)
 ## ⚡ Efficent Solution
 
 ```python
+    class Solution:
+        def trap(self, height: List[int]) -> int:
+            
+            n = len(height)
+            low,high = 0,n-1
+            left_max, right_max = 0,0
+            total = 0
     
+            while low < high:
+                if height[low] <= height[high]: # we are gonna take the min one
+                    if height[low] >= left_max: # max of left values
+                        left_max = height[low]
+                    else:
+                        total += left_max - height[low]
+                
+                    low += 1
+    
+                else:
+                    if height[high] >= right_max:
+                        right_max = height[high]
+                    else:
+                        total += right_max - height[high]
+                    
+                    high -= 1
+            
+            return total
+
+
 ```
 | Approach       | Time Complexity | Space Complexity |
 |----------------|-----------------|------------------|
-| Brute Force    | O(n)            | O(n)             |
-| Hashmap        | O(n)            | O(1)             |
+| DP             | O(n)            | O(n)             |
+| 2 pointers     | O(n)            | O(1)             |
 
 <details>
 <summary>Approach</summary>
     
-    1) 
+    1) So here first checking the minimum element of height[low] & height[high]
+    2) From there I comparing the maximum value of the previous iteration and with the height[left](In case of left), height[right](In case of right)
+    3) Then I am doing max_left(left case), max_right(right case) - height[low](left case), height[right](right case)
+    4) then adding it to the total value ----> total += of the point 3
+    5) here I did the same approach as the brute force but in this I am not using any array(using variable to store single value) so the space complexity is gonna be O(1)
     
 </details>
