@@ -31,7 +31,7 @@
 <details>
 <summary>Approach</summary>
 
-   1) Here I am using for loop as it moves in order(bcz we want the stock price high at small index and sell at low price and high index)---> simply follows the order
+   1) Here I am using for loop as it moves in order(bcz we want the stock price high at small index and sell at low price and high index)-------> simply follows the order
    2) I first need to find the minimum price so I initialized min(this constantly checks the minimum)
    3) I then did diff of mini and the current price
    4) If the diff is greater than all then that is been returned
