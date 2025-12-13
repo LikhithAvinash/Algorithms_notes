@@ -25,7 +25,7 @@ Sliding Window algo approach
 
 ```
 | Approach       | Time Complexity | Space Complexity |
-|----------------|-----------------|------------------|     |
+|----------------|-----------------|------------------|     
 | Sliding Window | O(n)            | O(1)             |
 
 <details>
