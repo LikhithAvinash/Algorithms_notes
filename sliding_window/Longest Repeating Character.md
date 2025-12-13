@@ -1,6 +1,4 @@
 ## Longest Repeating Character Replacement
-<details>
-<summary>Brute Force Solution</summary>
 
 ## ⚡ Efficent Solution
 Sliding Window algo approach
