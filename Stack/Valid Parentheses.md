@@ -31,9 +31,10 @@ Sliding Window algo approach
 # Time Complexity - O(n)
 # Space Complexity - O(1)
 ```
-| Approach       | Time Complexity | Space Complexity |
-|----------------|-----------------|------------------|     |
-| Efficent method| O(n)            | O(1)             |
+| Approach        | Time Complexity | Space Complexity |
+|-----------------|-----------------|------------------|
+| Efficent Method | O(n)            | O(1)             |
+
 
 <details>
 <summary>Approach</summary>
