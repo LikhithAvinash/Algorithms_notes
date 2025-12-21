@@ -32,10 +32,9 @@ Sliding Window algo approach
 <summary>Approach</summary>
     <b>Understanding</b> - I need to find the Longest substring that doesn't have any duplicate characters from the s(given parameter)
     
-    1) I am assuming left pointer as 'l',if I find any duplicate elements while adding it to the my set I will just remove it(this is under while loop)
-    2) so the above thing will remove elements till it finds out that there is not such element in my set
-    3) Also left pointer is incremented so that it assumes like the substring starts from that particular [l] index
-    4) if I dont find any duplicate element(the element which is already in my set) then I will keep on adding the new one
-    5) max_len variable gives me the updated max lenght of the substring
+    1) I initialized stack = [] to store open parenthesis && I created hashmap list ok key contining closed of different types of brackets
+    2) So here if the element is not in hashmap(sees key which contain closed) then append it to the stack 
+    3) if the element is hashmap then compare the previous element(stack[-1]) and current element value(by hashmpa[c])  if those are equal I will  pop the open parenthesis from stack
+    4) if stack is empty it means but there is element that is still left out that means that open parthensis or closed paranthesis are more or unequal so I return False
 </details>
 
