@@ -28,8 +28,8 @@
             return val
             
 
-## Time Complexity: O(n**2)
-## Space Complexity: O(n)
+## Time Complexity: O(n*m)
+## Space Complexity: O(1)
 ```
 </details>
 
