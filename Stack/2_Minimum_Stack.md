@@ -11,10 +11,10 @@
             count = 0
             val = []
             maxi = float('-inf')
-
+    
             if n < k:
                 return nums
-
+    
             for l in range(n-k+1):
                 while count < k:
                     maxi = max(maxi,nums[r])
@@ -40,10 +40,10 @@
 <summary>Approach</summary>
     <b>Understanding</b> - I need to find the Longest substring that doesn't have any duplicate characters from the s(given parameter)
     
-    1) I am assuming left pointer as 'l',if I find any duplicate elements while adding it to the my set I will just remove it(this is under while loop)
-    2) so the above thing will remove elements till it finds out that there is not such element in my set
-    3) Also left pointer is incremented so that it assumes like the substring starts from that particular [l] index
-    4) if I dont find any duplicate element(the element which is already in my set) then I will keep on adding the new one
-    5) max_len variable gives me the updated max lenght of the substring
+    1) I appended element for normal stack just buy using append but for minimum stack I did make sure the top of the element is minimum of previous element
+    2) Here I appended(Pushed) in 3 different ways for minimum stack
+    3) 1st way when there is no elemenet in the stack
+    4) 2nd way when the element is more than previous element I append the previous element again(as in the next step I pop again)
+    5) 3rd way when the element is when the previous element is small than previous element I append current element(val)
 </details>
 
