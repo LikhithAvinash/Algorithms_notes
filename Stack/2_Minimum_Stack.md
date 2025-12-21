@@ -32,9 +32,9 @@
 # Time Complexity - O(1)
 # Space Complexity - O(1)
 ```
-| Approach       | Time Complexity | Space Complexity |
-|----------------|-----------------|------------------|     |
-| Efficent method| O(1)            | O(1)             |
+| Approach       | Time Complexity | Space Complexity |  
+|----------------|-----------------|------------------|       
+| Efficent method| O(1)            | O(1)             |  
 
 <details>
 <summary>Approach</summary>
