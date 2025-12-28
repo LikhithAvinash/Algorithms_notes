@@ -4,29 +4,31 @@
 
 ```python
     
-    class Solution:
-        def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
-            n = len(nums)
-            r = 0
-            count = 0
-            val = []
-            maxi = float('-inf')
+    class MinStack:
+        def __init__(self):
+            self.stk = []
+            self.min_stk = []
     
-            if n < k:
-                return nums
+        def push(self, val: int) -> None:
+            self.stk.append(val)
     
-            for l in range(n-k+1):
-                while count < k:
-                    maxi = max(maxi,nums[r])
-                    count += 1
-                    r += 1
-                    
-                val.append(maxi)
-                maxi = float('-inf')
-                count -= count
-                r = l + 1
-            
-            return val
+            if not self.min_stk:
+                self.min_stk.append(val)
+            elif self.min_stk[-1] < val:
+                self.min_stk.append(self.min_stk[-1])
+            else:
+                self.min_stk.append(val)
+    
+        def pop(self) -> None:
+            self.stk.pop()
+            self.min_stk.pop()
+    
+        def top(self) -> int:
+            return self.stk[-1]
+    
+        def getMin(self) -> int:
+            return self.min_stk[-1]
+        
 
                 
 # Time Complexity - O(1)
